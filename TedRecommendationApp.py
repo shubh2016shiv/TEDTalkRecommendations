@@ -97,13 +97,14 @@ def showRecommendation(talk, metadata):
         try:
             if st.button("Get TED Talk Link", key=talk):
                 #webbrowser.open_new_tab(url)
-                pc.copy(url)
-                st.info("The Link: {} copied on clipboard".format(url))
+                st.info("The Link: {}".format(url))
+                #pc.copy(url)
+                
         except (Exception,):
             if st.button("Get TED Talk Link", key=url):
                 #webbrowser.open_new_tab(url)
-                pc.copy(url)
-                st.info("The Link: {} copied on clipboard".format(url))
+                #pc.copy(url)
+                st.info("The Link: {}".format(url))
 
     except (Exception,):
         st.error("Exception Occurred!!")
@@ -252,5 +253,5 @@ if selectTopics:
             url = getTalkURL(relatedTalk, metaData)
             if st.button("TED Talk Link", key=url + str(i)):
                 #webbrowser.open_new_tab(url)
-                pc.copy(url)
-                st.info("The Link: {} copied on clipboard".format(url))
+                #pc.copy(url)
+                st.info("The Link: {}".format(url))
